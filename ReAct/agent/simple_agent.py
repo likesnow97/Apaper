@@ -1,8 +1,11 @@
 import json
 import os
 
+from dotenv import load_dotenv
 from openai import OpenAI
 
+
+load_dotenv()
 
 MODEL_NAME = "qwen3-vl-8b"
 BASE_URL = os.environ.get("LLM_BASE_URL", "http://127.0.0.1:8765/v1")

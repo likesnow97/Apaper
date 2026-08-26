@@ -1,7 +1,12 @@
 import os
+
 import uvloop
+from dotenv import load_dotenv
 
 from vllm.entrypoints.openai.api_server import run_server
+
+
+load_dotenv()
 from vllm.entrypoints.openai.cli_args import (
     make_arg_parser,
     validate_parsed_serve_args,
